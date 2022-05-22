@@ -40,7 +40,7 @@ body {
   border-bottom: 1px solid #f0f0f0;
 }
 
-.navbar__logo{
+.navbar__logo {
   padding-left: 15px;
 }
 
@@ -84,6 +84,7 @@ body {
   color: #333;
 }
 
+/* Hasta */
 @media screen and (max-width: 768px) {
   .navbar__nav {
     position: absolute;
@@ -104,6 +105,8 @@ body {
     height: 0;
     transition: all .2s ease-in-out;
   }
+
+
 }
 
 .navbar__nav.active {
@@ -116,7 +119,33 @@ body {
   height: auto;
 }
 
-.navbar__btn{
+.wrapper__sidebar {
+  width: 100%;
+  background-color: #cececedc;
+  display: none;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: var(--navbar-height);
+  right: 0;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  z-index: 1;
+  transition: all .3s ease-in-out;
+}
+
+.wrapper__sidebar.active {
+  display: block;
+  padding: 20px 0;
+  height: auto;
+}
+
+
+.navbar__btn {
+  display: flex;
+  gap: 2rem;
   padding-right: 15px;
 }
 
@@ -126,6 +155,10 @@ body {
   outline: none;
   color: #333;
   cursor: pointer;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .about {
@@ -156,13 +189,13 @@ body {
   padding: 20px 0;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 15px;
-  border: 1px solid blueviolet;
+
 }
 
 .wrapper__container {
   padding: 20px;
-  border: 1px solid lightcoral;
 }
 
 .wrapper__products {
@@ -173,13 +206,11 @@ body {
 
 .wrapper__sidebar {
   padding: 20px;
-  border: 1px solid lightgreen;
 }
 
-.footer{
+.footer {
   background-color: #ff9c3ee8;
   padding: 20px;
-  border: 1px solid lightgreen;
 }
 
 @media screen and (min-width: 500px) {
@@ -191,25 +222,27 @@ body {
 
 @media screen and (min-width: 768px) {
   .wrapper {
-    
     flex-direction: row;
-
   }
 
   .wrapper__container {
     width: 70%;
   }
 
-  .wrapper__sidebar {
-   width: 30%;
-  }
 
   .navbar__btn-link {
-    visibility: hidden;
+    display: none;
+  }
+
+  .navbar__btn-link--card {
+    display: block;
   }
 
   .about__content {
     width: 35%;
   }
-}
 
+  .wrapper__sidebar {
+    width: 50%;
+  }
+}

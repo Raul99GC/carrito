@@ -7,9 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shopping Cart</title>
   <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-  <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -37,13 +35,43 @@
         </ul>
       </nav>
 
+      <!-- CART -->
+      <div class="wrapper__sidebar">
+        <!-- ============= cart =========== -->
+
+        <h3 class="wrapper__sidebar-cart-title">Your Cart</h3>
+
+        <!-- aquí se agregaran los productos al carrito -->
+        <div id="wrapper-cart" class="wrapper__sidebar-cart-items"></div>
+
+        <!-- aquí se mostrará el total del carrito -->
+        <div class="wrapper__sidebar-cart-total">
+          <span class="wrapper__sidebar-cart-total-text">Total:</span>
+          <span id="cart-total" class="wrapper__sidebar-cart-total-price">$0</span>
+        </div>
+
+        <!-- botón de pagar -->
+        <div class="wrapper__sidebar-cart-btn">
+          <button id="checkout" class="wrapper__sidebar-cart-btn-link">
+            <i class='bx bx-shopping-bag'></i>
+            <span class="wrapper__sidebar-cart-btn-text">Checkout</span>
+          </button>
+        </div>
+
+      </div>
+
       <!-- menu boton -->
       <div class="navbar__btn">
+        <button id="cartBtn" class="navbar__btn-link navbar__btn-link--card">
+          <i class='bx bxs-cart navbar__logo-icon'></i>
+        </button>
         <button id="navbarBtn" class="navbar__btn-link">
           <i class='bx bx-menu navbar__logo-icon'></i>
         </button>
       </div>
     </div>
+
+
   </header>
 
   <!-- seccion de sobre nosotros -->
@@ -70,30 +98,7 @@
       </div>
     </div>
 
-    <!-- carrito de compras -->
-    <aside class="wrapper__sidebar">
-      <!-- ============= cart =========== -->
-      <div class="wrapper__sidebar-cart active">
-        <h3 class="wrapper__sidebar-cart-title">Your Cart</h3>
 
-        <!-- aquí se agregaran los productos al carrito -->
-        <div id="wrapper-cart" class="wrapper__sidebar-cart-items"></div>
-
-        <!-- aquí se mostrará el total del carrito -->
-        <div class="wrapper__sidebar-cart-total">
-          <span class="wrapper__sidebar-cart-total-text">Total:</span>
-          <span id="cart-total" class="wrapper__sidebar-cart-total-price">$0</span>
-        </div>
-
-        <!-- botón de pagar -->
-        <div class="wrapper__sidebar-cart-btn">
-          <button id="checkout" class="wrapper__sidebar-cart-btn-link">
-            <i class='bx bx-shopping-bag'></i>
-            <span class="wrapper__sidebar-cart-btn-text">Checkout</span>
-          </button>
-        </div>
-      </div>
-    </aside>
   </main>
 
   <footer class="footer">
@@ -102,7 +107,6 @@
         <i class='bx bx-shopping-bag footer__logo-icon'></i> <span class="footer__logo-text">Shoping Cart</span>&copy;
         2022.
       </p>
-      <progress min='0' max="100" value="50"></progress>
     </div>
   </footer>
 

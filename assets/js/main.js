@@ -14,6 +14,16 @@
 // }
 
 // start navbar btn menu
+
+const cartBtn = document.getElementById('cartBtn')
+const cartCont = document.querySelector('.wrapper__sidebar')
+
+cartBtn.addEventListener('click', function (e) {
+    console.log(cartCont)
+    cartCont.classList.toggle('active')
+})
+
+
 const navbarBtn = document.getElementById('navbarBtn')
 const navbarNav = document.querySelector('.navbar__nav')
 
